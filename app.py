@@ -17,7 +17,7 @@ def homepage():
 
 @app.route("/baekjoon")
 def baekjoon():
-    Algorithm__tag = request.args.get("Algorithm__baekjoon")
+    Algorithm__tag = request.args.get("Algorithm__baekjoon.html")
     if Algorithm__tag:
         Algorithm__tag = Algorithm__tag.lower()
         # Tag=getAlgorithmTag(Algorithm__tag)
