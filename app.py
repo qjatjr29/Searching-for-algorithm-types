@@ -15,9 +15,21 @@ def homepage():
     return render_template("index.html")
 
 
+@app.route("/Search_Baekjoon")
+def SearchBJ():
+    # return render_template("site.html")
+    return render_template("Search_Baekjoon.html")
+
+
+@app.route("/Search_Algospot")
+def SearchAlgo():
+    return render_template("Search_Algospot.html")
+
+
 @app.route("/baekjoon")
 def baekjoon():
-    Algorithm__tag = request.args.get("Algorithm__baekjoon.html")
+    print("hi")
+    Algorithm__tag = request.args.get("Algorithm__baekjoon")
     if Algorithm__tag:
         Algorithm__tag = Algorithm__tag.lower()
         # Tag=getAlgorithmTag(Algorithm__tag)

@@ -6,8 +6,18 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css') }}">
   </head>
   <body >
-
-    <h1>BaekJoon Search</h1>
+    <div class="status-bar">
+      <div class="clock">
+        <h1></h1>
+        <h3></h3>
+      </div>
+      <div class="website__icon">
+        <a href="Search_Baekjoon">BaekJoon Searching</a>
+        <a href="Search_Algospot">Algospot Searching</a>
+      </div>
+    </div> 
+     
+    <!-- <h1>BaekJoon Search</h1>
     <form action="/baekjoon" method="get">
       <input
         type="text"
@@ -26,6 +36,7 @@
         name="Algorithm__algospot"
       />
       <button>Search</button>
-    </form>
+    </form> -->
+    <script src="{{url_for('static', filename='JavaScript/time.js') }}"></script>
   </body>
 </html>
