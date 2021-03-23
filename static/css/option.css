@@ -1,0 +1,56 @@
+.option{
+    width:400px;
+    border-radius: 15px;
+    
+}
+
+.parent{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows:  400px 100px ;
+    box-sizing: border-box;
+    justify-content: center;
+    box-sizing: border-box;
+    /* align-items: center; */
+    /* position:relative; */
+}
+.TodoList,.FinishList {
+   margin:0;
+}
+.TodoList span h3,.FinishList span h3{
+   margin:10px 5px;
+   font-size: 17px;
+ }
+.form__todo input{
+    background-color: transparent;
+    border-radius: 20px;
+    width:300px;
+    height: 40px;
+    text-align: center;
+    border-color:rgba(0,0,0,0.05);
+}
+.form__todo input::placeholder{
+    color:black;
+    font-size:16px;
+}
+.form__todo input:focus{
+    outline:none;
+}
+.form__todo input:focus::placeholder{
+    color:transparent;
+}
+
+.TodoProblem li,.FinishProblem li{
+    font-size:15px;
+    margin-bottom: 5px;
+}
+
+
+.TodoProblem li button,.FinishProblem li button{
+    margin-left : 8px;
+    width:25px;
+    height: 25px;
+    font-size: 10px;
+    border-radius: 10px;
+    background-color: white;
+}

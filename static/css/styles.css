@@ -1,9 +1,28 @@
+
+@import "status-bar.css";
+@import "menu.css";
+@import "option.css";
+@import "main_img.css";
+
 h1{
-    font-size: 50px;
+    font-size: 40px;
 }
 body{
-    background-color: bisque;
+    background-color: white;
+    height: 100vh;
+    box-sizing: border-box;
 }
 button{
     border-radius: 10px;
+}
+
+.main{
+    position: absolute;
+    width: 100%;
+    top:200px;
+    height: 1000px;
+    display:flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    /* align-items: center; */
 }
