@@ -15,6 +15,11 @@ def homepage():
     return render_template("index.html")
 
 
+# @app.route("/home")
+# def redirecting():
+#     return render_template("index.html")
+
+
 @app.route("/Search_Baekjoon")
 def SearchBJ():
     # return render_template("site.html")
