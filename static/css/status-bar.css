@@ -25,3 +25,14 @@
     border-radius: 13px;
     margin-right:10px;
 }
+
+.BGM__button{
+    background-color: white;
+    border:none;
+}
+.BGM__button:focus{
+    outline:none;
+}
+.BGM__button i{
+    font-size:20px;
+}

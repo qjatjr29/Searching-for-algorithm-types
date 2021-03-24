@@ -18,15 +18,17 @@ def extract_problem(problems):
     # print(problems)
     td = problems.find_all("td")
     td_size = len(td)
-    ID = problems.find("td", {"class": "id"}).find("a").text
-    name = problems.find("td", {"class": "name"}).find("a").text
-    writer = problems.find("td", {"class": "writer"}).find("a").text
-    submit = int(problems.find("td", {"class": "submissions"}).find("a").text)
-    accepted = td[td_size-1].find("a").text
+    ID = problems.find("td", {"class": "id"}).find("a").text  # ID
+    name = problems.find("td", {"class": "name"}).find("a").text  # 문제이름
+    writer = problems.find("td", {"class": "writer"}).find("a").text  # 저자
+    submit = int(problems.find(
+        "td", {"class": "submissions"}).find("a").text)  # 제출수
+    accepted = td[td_size-1].find("a").text  # 정답률
+    link = f"https://algospot.com/judge/problem/read/{ID}"
 
     print(
         f"ID : {ID} name : {name} writer : {writer} submit : {submit} correctRate:{accepted}%")
-    return {"ID": ID, "name": name, "writer": writer, "submit": submit, "correctRate": accepted}
+    return {"ID": ID, "name": name, "writer": writer, "submit": submit, "correctRate": accepted, "link": link}
 
 
 # 모든 페이지마다 추출하기 위해 반복문으로 페이지 추출하는 함수로 들어가기

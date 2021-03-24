@@ -47,8 +47,9 @@ def extract_problem(problems):
     submit = tdList[2].get_text(strip=True)
     correctRate = 100*int(correct)/int(submit)
     correctRate = round(correctRate, 3)
+    link = "https://www.acmicpc.net/problem/"+number
     # print(f"number : {number} title : {title} correct : {correct} submit : {submit} correctRate:{correctRate}%")
-    return {"number": number, "title": title, "correct": correct, "submit": submit, "correctRate": correctRate}
+    return {"number": number, "title": title, "correct": correct, "submit": submit, "correctRate": correctRate, "link": link}
 
 
 # 모든 페이지마다 추출하기 위해 반복문으로 페이지 추출하는 함수로 들어가기

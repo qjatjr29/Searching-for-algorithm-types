@@ -2,34 +2,108 @@
 <html>
   <head>
     <title>Algorithm Search</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/status-bar.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/menu.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main_img.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/option.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/result-main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/search_main.css')}}">
+    <link rel="stylesheet" href="../static/css/styles.css">
     <meta charset="UTF-8">
-    <style>
+    <!-- <style>
       section {
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(5, 1fr);
       }
-    </style>
+    </style> -->
   </head>
   <body>
-    <h1>BaekJoon Search Results</h1>
-    <h3>Found {{resultsNumber}} results for : {{searchingBy}}</h3>
-    <!-- <a href="/export?word={{searchingBy}}">Export to CSV</a> -->
-    <section>
-      <h4>Number</h4>
-      <h4>Title</h4>
-      <h4>Correct</h4>
-      <h4>Submit</h4>
-      <h4>Rate</h4>
-      {% for problem in problems %}
-      <span>{{problem.number}}</span>
-      <span>{{problem.title}}</span>
-      <span>{{problem.correct}}</span>
-      <span>{{problem.submit}}</span>
-      <span>{{problem.correctRate}}</span>
+    <div class="status-bar">
+      <div class="clock">
+          <h1>18:18</h1>
+          <!-- <h3>2021.02.23 wednesday</h3> -->
+      </div>
+      <div class="BGM">
+        <button class="BGM__button">
+          <!-- <span>BGM</span> -->
+          <i class="fas fa-play fa-lg"></i>
+        </button>
+      </div>
+      <div class="website__icon">
+        <a href="https://www.acmicpc.net/" target="_blank"><img src="http://onlinejudgeimages.s3-ap-northeast-1.amazonaws.com/images/boj-og-1200.png" alt="baekjoon"></a>
+        <a href="https://algospot.com/" target="_blank"><img src="{{url_for('static', filename='img/알고스팟.PNG') }}" alt=""></a>
+        <a href="https://www.google.co.kr/" target="_blank"><img src="{{url_for('static', filename='img/구글.PNG') }}" alt="google"></a>
+      </div>
+    </div> 
 
-      {%endfor%}
-    </section>
+    <div class="Result-main">
+      <div class="menu">
+        <h3>Algorithm</h3>
+        <div class="menu__row">
+          <div class="menu__row-a"><a href="">Home</a></div>
+          <div class="menu__row-a"><a href="Search_Baekjoon">BaekJoon Searching</a></div>
+          <div class="menu__row-a"><a href="Search_Algospot">Algospot Searching</a></div>
+        </div>
+      </div>
+      <div class="SearchResult">
+        <h1>BaekJoon Search Results</h1>
+        <h3>Found {{resultsNumber}} results for : {{searchingBy}}</h3>
+        <!-- <a href="/export?word={{searchingBy}}">Export to CSV</a> -->
+        <section>
+          <h4>Number</h4>
+          <h4>Title</h4>
+          <h4>Correct</h4>
+          <h4>Submit</h4>
+          <h4>Rate</h4>
+          <h4>Link</h4>
+          {% for problem in problems %}
+          <span>{{problem.number}}</span>
+          <span>{{problem.title}}</span>
+          <span>{{problem.correct}}</span>
+          <span>{{problem.submit}}</span>
+          <span>{{problem.correctRate}}</span>
+          <span>{{problem.link}}</span>
+
+          {%endfor%}
+        </section>
+      </div>
+      <div class="option result__option">
+        <div class="outer__box parent">
+          <div class="TodoList">
+            <span>
+              <h3>Problem List</h3>
+              <ul class="TodoProblem">
+
+              </ul>
+            </span>
+          </div>
+          <div class="FinishList">
+            <span>
+              <h3>Finish </h3>
+              <ul class="FinishProblem">
+              </ul>
+            </span>
+          </div>
+          <div class="Todo__input">
+            <form class="form__todo">
+              <input type="text" placeholder="Write a Todo">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{url_for('static', filename='JavaScript/time.js') }}"></script>
+    <script src="{{url_for('static', filename='JavaScript/todo.js') }}"></script>
+    <script src="{{url_for('static', filename='JavaScript/bgm.js') }}"></script>
+    <script src="../static/JavaScript/todo.js"></script>
+    <script src="../static/JavaScript/time.js"></script>
+    <script src="../static/JavaScript/bgm.js"></script>
+    <script
+      src="https://kit.fontawesome.com/188f7f5ed5.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

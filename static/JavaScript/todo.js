@@ -36,22 +36,23 @@ function addTodo(task) {
 }
 
 function findFin(taskID) {
-    console.log(taskID);
-    console.log(finishList);
-    return finishList.find(function (task) {
+    // console.log(taskID);
+    // console.log(finishList);
+    return findList = finishList.find(function (task) {
         return taskID === task.id;
     });
 }
 function findTodo(taskID) {
-    console.log(taskID);
-    console.log(todoList);
-    return todoList.find(function (task) {
+    // console.log(taskID);
+    // console.log(todoList);
+    return findList = todoList.find(function (task) {
         return taskID === task.id;
     });
 }
 
 function delteTask(event) {
-    const li = event.target.parentNode;
+
+    const li = event.target.parentNode.parentNode;
     li.parentNode.removeChild(li);
     removeFin(li.id);
     removeTodo(li.id);
@@ -60,10 +61,13 @@ function delteTask(event) {
 }
 // todolist로 보내는 함수
 function TodoTask(event) {
-    const li = event.target.parentNode;
+    console.log(event.target);
+    const li = event.target.parentNode.parentNode;
+    // console.log(li);
+
     li.parentNode.removeChild(li);
     const handing = findFin(li.id);
-    console.log("todo:", handing);
+    // console.log("todo:", handing);
     removeFin(li.id);
     addTodo(handing);
     getTodoList(handing);
@@ -72,9 +76,15 @@ function TodoTask(event) {
 }
 // finish list로 보내는 함수
 function FinishTask(event) {
-    const li = event.target.parentNode;
+    // console.log(todoList);
+    // console.log(event.target);
+    const li = event.target.parentNode.parentNode;
+    // console.log(li);
+    // console.log(li.parentNode);
     li.parentNode.removeChild(li);
     const handing = findTodo(li.id);
+    console.log(li);
+    // console.log(li.id);
     removeTodo(li.id);
     addFin(handing);
     getFinList(handing);
@@ -85,12 +95,14 @@ function FinishTask(event) {
 
 
 function basicForm(toDO) {
-    console.log(toDO);
+    // console.log(toDO);
     const li = document.createElement("li");
     const li_span = document.createElement("span");
     const deleBtn = document.createElement("button");
-    deleBtn.innerHTML = "❌";
+    deleBtn.innerHTML = `<span>❌</span>`;
+    // console.log(deleBtn);
     deleBtn.addEventListener("click", delteTask);
+    // console.log(deleBtn);
     li_span.innerText = toDO.text;
     li.appendChild(li_span);
     li.appendChild(deleBtn);
@@ -101,14 +113,15 @@ function getFinList(input_text) {
     // console.log(input_text);
     const basicli = basicForm(input_text);
     const backBtn = document.createElement("button");
-    backBtn.innerHTML = "⏪";
+    backBtn.innerHTML = `<span>⏪</span>`;
     backBtn.addEventListener("click", TodoTask);
+    console.log(backBtn);
     basicli.appendChild(backBtn);
     FinishList.appendChild(basicli);
 }
 
 function getTodoList(input_text) {
-    console.log(input_text);
+    // console.log(input_text);
     const basicli = basicForm(input_text);
     const finBtn = document.createElement("button");
     finBtn.innerHTML = `<i class="fas fa-check"></i>`;
@@ -142,7 +155,6 @@ function loadTodo() {
     todoList = JSON.parse(localStorage.getItem(TODO_LS)) || [];
     finishList = JSON.parse(localStorage.getItem(FINISH_LS)) || [];
     todoList.forEach(function (pend) {
-        console.log(pend);
         getTodoList(pend);
     });
     finishList.forEach(function (fin) {

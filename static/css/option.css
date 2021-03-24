@@ -30,7 +30,7 @@
     border-color:rgba(0,0,0,0.05);
 }
 .form__todo input::placeholder{
-    color:black;
+    color:rgba(0,0,0,0.5);
     font-size:16px;
 }
 .form__todo input:focus{
@@ -40,6 +40,9 @@
     color:transparent;
 }
 
+.TodoProblem,.FinishProblem{
+    padding:0 25px;
+}
 .TodoProblem li,.FinishProblem li{
     font-size:15px;
     margin-bottom: 5px;

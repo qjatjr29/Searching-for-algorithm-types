@@ -3,6 +3,8 @@
 @import "menu.css";
 @import "option.css";
 @import "main_img.css";
+@import "search_main.css";
+@import "result-main.css";
 
 h1{
     font-size: 40px;
@@ -16,7 +18,7 @@ button{
     border-radius: 10px;
 }
 
-.main{
+.main, .searchPage-main,.Result-main{
     position: absolute;
     width: 100%;
     top:200px;
@@ -25,4 +27,11 @@ button{
     /* flex-direction: column; */
     justify-content: space-between;
     /* align-items: center; */
+}
+
+
+section{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(6, 1fr);
 }
