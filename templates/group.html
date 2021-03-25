@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Algorithm Search</title>
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/status-bar.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/menu.css')}}">
@@ -11,8 +10,16 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/result-main.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/search_main.css')}}">
     <link rel="stylesheet" href="../static/css/styles.css">
+    <meta charset="UTF-8">
+    <!-- <style>
+      section {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(5, 1fr);
+      }
+    </style> -->
   </head>
-  <body >
+  <body>
     <div class="status-bar">
       <div class="clock">
           <h1>18:18</h1>
@@ -31,7 +38,7 @@
       </div>
     </div> 
 
-    <div class="main">
+    <div class="Result-main">
       <div class="menu">
         <h3>Algorithm</h3>
         <div class="menu__row">
@@ -42,29 +49,39 @@
           <div class="menu__row-a"><a href="Group">Group Searching</a></div>
         </div>
       </div>
-      <div class="main_img">
-        <img src="{{url_for('static', filename='img/1.jpg') }}" alt="">
+      <div class="BaekJoon Group">
+        <h1>Group Search Results</h1>
+        <h3>Found {{resultsNumber}} results for : {{searchingBy}}</h3>
+        <!-- <a href="/export?word={{searchingBy}}">Export to CSV</a> -->
+        <section class="groupSection">
+          <h4>Group</h4>
+          <h4>Boss</h4>
+          <h4>Link</h4>
+          {% for group in groups %}
+          <span>{{group.GroupName}}</span>
+          <span>{{group.GroupBoss}}</span>
+          <a href="{{group.GroupLink}}">link</a>
+
+          {%endfor%}
+        </section>
       </div>
-      <div class="option">
+      <div class="option result__option">
         <div class="outer__box parent">
           <div class="TodoList">
             <span>
               <h3>Problem List</h3>
-              <ul class="TodoProblem"></ul>
+              <ul class="TodoProblem">
+
+              </ul>
             </span>
+          </div>
+          <div class="FinishList">
             <span>
               <h3>Finish </h3>
               <ul class="FinishProblem">
               </ul>
             </span>
           </div>
-          <!-- <div class="FinishList">
-            <span>
-              <h3>Finish </h3>
-              <ul class="FinishProblem">
-              </ul>
-            </span>
-          </div> -->
           <div class="Todo__input">
             <form class="form__todo">
               <input type="text" placeholder="Write a Todo">
@@ -73,28 +90,7 @@
         </div>
       </div>
     </div>
-    
-     
-    <!-- <h1>BaekJoon Search</h1>
-    <form action="/baekjoon" method="get">
-      <input
-        type="text"
-        placeholder="Search for a Algorithm?"
-        required
-        name="Algorithm__baekjoon"
-      />
-      <button>Search</button>
-    </form>
-    <h1>Algospot Search</h1>
-    <form action="/algospot" method="get">
-      <input
-        type="text"
-        placeholder="Search for a Algorithm?"
-        required
-        name="Algorithm__algospot"
-      />
-      <button>Search</button>
-    </form> -->
+
     <script src="{{url_for('static', filename='JavaScript/time.js') }}"></script>
     <script src="{{url_for('static', filename='JavaScript/todo.js') }}"></script>
     <script src="{{url_for('static', filename='JavaScript/bgm.js') }}"></script>

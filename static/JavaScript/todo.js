@@ -52,7 +52,7 @@ function findTodo(taskID) {
 
 function delteTask(event) {
 
-    const li = event.target.parentNode.parentNode;
+    const li = event.target.parentNode;
     li.parentNode.removeChild(li);
     removeFin(li.id);
     removeTodo(li.id);
@@ -62,7 +62,7 @@ function delteTask(event) {
 // todolist로 보내는 함수
 function TodoTask(event) {
     console.log(event.target);
-    const li = event.target.parentNode.parentNode;
+    const li = event.target.parentNode;
     // console.log(li);
 
     li.parentNode.removeChild(li);
@@ -78,7 +78,7 @@ function TodoTask(event) {
 function FinishTask(event) {
     // console.log(todoList);
     // console.log(event.target);
-    const li = event.target.parentNode.parentNode;
+    const li = event.target.parentNode;
     // console.log(li);
     // console.log(li.parentNode);
     li.parentNode.removeChild(li);
@@ -99,7 +99,7 @@ function basicForm(toDO) {
     const li = document.createElement("li");
     const li_span = document.createElement("span");
     const deleBtn = document.createElement("button");
-    deleBtn.innerHTML = `<span>❌</span>`;
+    deleBtn.innerHTML = "❌";
     // console.log(deleBtn);
     deleBtn.addEventListener("click", delteTask);
     // console.log(deleBtn);
@@ -113,7 +113,7 @@ function getFinList(input_text) {
     // console.log(input_text);
     const basicli = basicForm(input_text);
     const backBtn = document.createElement("button");
-    backBtn.innerHTML = `<span>⏪</span>`;
+    backBtn.innerHTML = "⏪";
     backBtn.addEventListener("click", TodoTask);
     console.log(backBtn);
     basicli.appendChild(backBtn);
@@ -124,7 +124,7 @@ function getTodoList(input_text) {
     // console.log(input_text);
     const basicli = basicForm(input_text);
     const finBtn = document.createElement("button");
-    finBtn.innerHTML = `<i class="fas fa-check"></i>`;
+    finBtn.innerHTML = "✅";
     // finBtn.innerHTML = "X";
     finBtn.addEventListener("click", FinishTask);
     basicli.appendChild(finBtn);

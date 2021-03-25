@@ -45,6 +45,7 @@
           <!-- <div class="menu__row-a"><a href="/">Home</a></div> -->
           <div class="menu__row-a"><a href="Search_Baekjoon">BaekJoon Searching</a></div>
           <div class="menu__row-a"><a href="Search_Algospot">Algospot Searching</a></div>
+          <div class="menu__row-a"><a href="Group">Group Searching</a></div>
         </div>
       </div>
       <div class="SearchResult">
@@ -63,8 +64,8 @@
           <span>{{problem.name}}</span>
           <span>{{problem.writer}}</span>
           <span>{{problem.submit}}</span>
-          <span>{{problem.correctRate}}</span>
-          <span>{{problem.link}}</span>
+          <span>{{problem.correctRate}} %</span>
+          <a href="{{problem.link}}">link</a>
   
           {%endfor%}
         </section>

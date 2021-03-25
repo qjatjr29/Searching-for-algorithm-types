@@ -6,7 +6,7 @@
 
 .parent{
     display: grid;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 400px;
     grid-template-rows:  400px 100px ;
     box-sizing: border-box;
     justify-content: center;
