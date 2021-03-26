@@ -1,4 +1,4 @@
-
+@import "background.css";
 @import "status-bar.css";
 @import "menu.css";
 @import "option.css";
@@ -38,6 +38,6 @@ section{
 
 .groupSection{
     display: grid;
-    gap: 50px;
+    gap: 100px;
     grid-template-columns: repeat(3, 1fr);
 }

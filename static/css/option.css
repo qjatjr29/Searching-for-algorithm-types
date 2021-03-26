@@ -1,7 +1,7 @@
 .option{
     width:400px;
     border-radius: 15px;
-    
+    background-color: linear-gradient(to bottom, #ffffff31, #ffeeee31);
 }
 
 .parent{
@@ -15,6 +15,7 @@
     /* position:relative; */
 }
 .TodoList,.FinishList {
+    background-color: rgba(255,255,255,0.6);
    margin:0;
 }
 .TodoList span h3,.FinishList span h3{

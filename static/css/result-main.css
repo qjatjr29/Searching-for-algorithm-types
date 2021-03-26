@@ -1,4 +1,4 @@
-.SearchResult{
+.SearchResult,.BaekJoonGroup{
     width:850px;
     /* left:30px; */
     display: flex;
@@ -10,11 +10,11 @@
     /* justify-content: flex-end; */
 }
 
-.SearchResult h1{
+.SearchResult h1,.BaekJoonGroup h1{
     font-size:35px;
     margin-bottom: 15px;
 }
-.SearchResult h3{
+.SearchResult h3,.BaekJoonGroup h3{
     font-size: 15px;
     margin-bottom: 40px;
 }
