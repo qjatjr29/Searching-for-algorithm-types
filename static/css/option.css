@@ -1,44 +1,68 @@
 .option{
     width:400px;
     border-radius: 15px;
-    background-color: linear-gradient(to bottom, #ffffff31, #ffeeee31);
+    /* background-color: linear-gradient(to bottom, #ffffff31, #ffeeee31); */
 }
-
+.outer__box{
+    /* background-color: linear-gradient(to bottom, #ffffff31, #ffeeee31); */
+    /* background-color: bisque; */
+    background-color: rgba(219, 219, 219, 0.6);
+    border-radius: 15px;
+}
 .parent{
     display: grid;
     grid-template-columns: 400px;
     grid-template-rows:  400px 100px ;
     box-sizing: border-box;
-    justify-content: center;
-    box-sizing: border-box;
+    justify-content: space-between;
+    
+    padding:10px 5px;
+    /* align-items: center; */
     /* align-items: center; */
     /* position:relative; */
 }
 .TodoList,.FinishList {
-    background-color: rgba(255,255,255,0.6);
-   margin:0;
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 15px;
+    margin:0;
+    width:380px;
+    
 }
 .TodoList span h3,.FinishList span h3{
    margin:10px 5px;
-   font-size: 17px;
+   font-size: 20px;
+   font-family: 'Indie Flower', cursive;
  }
 .form__todo input{
     background-color: transparent;
     border-radius: 20px;
-    width:300px;
-    height: 40px;
+    width:350px;
+    height: 50px;
     text-align: center;
     border-color:rgba(0,0,0,0.05);
+    color:black;
 }
 .form__todo input::placeholder{
     color:rgba(0,0,0,0.5);
-    font-size:16px;
+    font-size:20px;
+    font-family: 'Indie Flower', cursive;
 }
 .form__todo input:focus{
     outline:none;
 }
 .form__todo input:focus::placeholder{
     color:transparent;
+}
+.form__todo{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.Todo__input{
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .TodoProblem,.FinishProblem{
@@ -47,6 +71,7 @@
 .TodoProblem li,.FinishProblem li{
     font-size:15px;
     margin-bottom: 5px;
+    font-family: 'Padauk', sans-serif;
 }
 
 

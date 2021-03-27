@@ -5,7 +5,8 @@
 @import "main_img.css";
 @import "search_main.css";
 @import "result-main.css";
-
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jura:wght@300;400;600&family=Padauk&display=swap');
 h1{
     font-size: 40px;
 }
