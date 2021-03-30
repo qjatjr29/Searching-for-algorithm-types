@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Algorithm Search</title>
+    <title>BackJoon Group Search Result</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/status-bar.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/menu.css')}}">
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/search_main.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/background.css')}}">
     <link rel="stylesheet" href="../static/css/styles.css">
+    <link href="../static/img/경희대.PNG" rel="shortcut icon" type="image/x-icon">
+    <link href="{{url_for('static', filename='img/경희대.PNG')}}" rel="shortcut icon" type="image/x-icon">
     <meta charset="UTF-8">
     <!-- <style>
       section {
@@ -67,6 +69,7 @@
         </section>
       </div>
       <div class="option result__option">
+        <button class="showButton buttonUp"><i class="fas fa-chevron-down"></i></button>
         <div class="outer__box parent">
           <div class="TodoList">
             <span>
@@ -96,6 +99,8 @@
     <script src="{{url_for('static', filename='JavaScript/todo.js') }}"></script>
     <script src="{{url_for('static', filename='JavaScript/bgm.js') }}"></script>
     <script src="{{url_for('static', filename='JavaScript/background.js') }}"></script>
+    <script src="{{url_for('static', filename='JavaScript/showButton.js') }}"></script>
+    <script src="../static/JavaScript/showButton.js"></script>
     <script src="../static/JavaScript/background.js"></script>
     <script src="../static/JavaScript/todo.js"></script>
     <script src="../static/JavaScript/time.js"></script>

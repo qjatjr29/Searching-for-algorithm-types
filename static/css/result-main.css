@@ -1,5 +1,5 @@
 .SearchResult,.BaekJoonGroup{
-    width:850px;
+    width:870px;
     /* left:30px; */
     display: flex;
     flex-direction: column;
@@ -17,6 +17,9 @@
 .SearchResult h3,.BaekJoonGroup h3{
     font-size: 15px;
     margin-bottom: 40px;
+}
+.SearchResult span{
+    font-size:12px;
 }
 .Result-main{
     position: relative;

@@ -1,7 +1,33 @@
 .option{
     width:400px;
+    height: 620px;
     border-radius: 15px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
     /* background-color: linear-gradient(to bottom, #ffffff31, #ffeeee31); */
+}
+.check{
+    display: flex;
+    align-items: center;
+}
+.showButton{
+    width:20px;
+    height: 80px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: rgb(26, 26, 26);
+    color:white;
+}
+.showButton:hover,.showButton:focus{
+    background-color: rgba(0,0,0,0.3);
+    outline:none;
+}
+.buttonUp{
+    top:0;
+    left:0;
+    width:80px;
+    height: 20px;
 }
 .outer__box{
     /* background-color: linear-gradient(to bottom, #ffffff31, #ffeeee31); */
@@ -9,6 +35,10 @@
     background-color: rgba(219, 219, 219, 0.6);
     border-radius: 15px;
 }
+/* .showing{
+    display:block;
+} */
+
 .parent{
     display: grid;
     grid-template-columns: 400px;
@@ -25,7 +55,7 @@
     background-color: rgba(255, 255, 255, 0.815);
     border-radius: 15px;
     margin:0;
-    width:380px;
+    width:400px;
     
 }
 .TodoList span h3,.FinishList span h3{
